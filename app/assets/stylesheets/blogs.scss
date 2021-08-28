@@ -1,3 +1,105 @@
 // Place all the styles related to the blogs controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  width: 400px;
+  padding: 0px;
+  margin: 5px;
+  background-color: linear-gradient (#fff, #d3d8e8);
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+header {
+    width: 340%;
+    background-color: #3b5998;
+    height: 12.2%;
+    margin: 0;
+    font-family: tahoma;
+    border: 1px solid darkblue;
+    display: flex;
+  }
+
+  .login_option{
+    font-size: 20px;
+    font-weight: bold;
+    background-color:ghostwhite;
+  }
+   
+.fb {
+  font-size: 38px;
+  position: absolute;
+  left: 180px;
+  color: #fff;
+  top: 3.5%;
+  font-weight: bold;
+}
+
+.connexion {
+  position: absolute;
+  right: 100px;
+  top: 3.5%;
+  color: #fff;
+}
+ 
+.bg-info {
+  width: 55%;
+  height: 100%;
+  position: absolute;
+  background-color: #fff;
+  left: 0;
+}
+
+.Info{
+  color: rgb(14, 56, 95);
+  font-size: 20px;
+  font-weight: 700;
+  width: 500px;
+  margin: 5px;
+}
+
+.image {
+  position: relative;
+  left: 10px;
+  width: 600px;
+}
+
+.bg-warning {
+  width: 50%;
+  height: 100%;
+  position: absolute;
+  background-color: ghostwhite;
+  left: 56%;
+}
+
+form {
+  display: block;
+}
+
+.sign-up {
+    margin: 0 auto;
+    list-style: none;
+  }
+
+.submit{
+  margin: 15px;
+  padding: 15px;
+  position: fixed;
+}
+
+  footer {
+    height: 10%;
+    width: 100%;
+    background-color:#3b5998;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  }

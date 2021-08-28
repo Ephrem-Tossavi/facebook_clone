@@ -1,8 +1,24 @@
-<h1>Log in</h1> 
- <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
- <%= f.label :email %> 
- <%= f.email_field :email %> 
- <%= f.label :password %> 
- <%= f.password_field :password %> 
- <%= f.submit "Log in" %> 
- <% end %>
+ <div class="container">
+    <div class="row">
+        
+        <div class="col bg-info">
+            <span class="Info">Avec Facebook, partagez et restez en contact avec votre entourage.</span>
+             <img src="https://www.conseilsmarketing.com/wp-content/uploads/2019/10/Depositphotos_37887225_xl.jpg" class="image">
+        </div>
+        
+        <div class="col bg-warning"><h1> Log in </h1>
+           <div class="form">
+            <%= form_with(scope: :session, url: sessions_path, local: true) do |f| %>
+            <ul class="sign-up">
+                <li><%= f.label :email%></li>
+                <li><%= f.email_field :email%></li>
+                <li><%= f.label :password%> </li>
+                <li><%= f.password_field :password%> </li>
+                <li><span class="submit"><%= f.submit "Log in" %> </span></li>
+            </ul> 
+            <% end%>
+          </div> 
+        </div>
+    </div>
+</div>
+<%= render 'footer', session: @session %>

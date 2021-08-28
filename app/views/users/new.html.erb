@@ -1,25 +1,41 @@
 
-<h1> S'inscrire </h1> 
-<% if @user.errors.any? %>
-<div id= "error_explanation">
- <h2> <%= pluralize(@user.errors.count, "error")%> a interdit l'enregistrement de ce <%= @user.name%>: </h2> 
- <ul> 
- <% @user.errors.full_messages.each do |message|%> 
- <li> <%= message%> </li> 
- <% end%> 
- </ul> 
- </div> 
- <% end%> 
- <%= form_with(model: @user, local: true) do |form|%> 
- <%= form.label :name%> 
- <%= form.text_field :name%> 
- <%= form.label :email%> 
- <%= form.email_field :email%> 
- <%= form.label :password%> 
- <%= form.password_field :password%> 
- <%= form.label :password_confirmation%> 
- <%= form.password_field :password_confirmation%> 
- <%= form.label :image%> 
- <%= form.file_field :image%> 
- <%= form.submit "Créer mon compte"%> 
- <% end%>
+<div class="container">
+    <div class="row">
+        
+        <div class="col bg-info">
+            <span class="Info">Avec Facebook, partagez et restez en contact avec votre entourage.</span>
+             <img src="https://www.conseilsmarketing.com/wp-content/uploads/2019/10/Depositphotos_37887225_xl.jpg" class="image">
+        </div>
+        
+        <div class="col bg-warning"><h1> S'inscrire </h1> 
+        <% if @user.errors.any? %>
+        <div id= "error_explanation">
+         <h2> <%= pluralize(@user.errors.count, "error")%> a interdit l'enregistrement de ce <%= @user.name%>: </h2> 
+         <ul> 
+         <% @user.errors.full_messages.each do |message|%> 
+         <li> <%= message%> </li> 
+         <% end%> 
+         </ul> 
+         </div>
+         <div class="form">
+            <% end%> 
+            <%= form_with(model: @user, local: true) do |form|%> 
+            <ul class="sign-up">
+                <li><%= form.label :name%> </li>
+                <li><%= form.text_field :name%></li>
+                <li><%= form.label :email%></li>
+                <li><%= form.email_field :email%></li>
+                <li><%= form.label :password%> </li>
+                <li><%= form.password_field :password%> </li>
+                <li><%= form.label :password_confirmation%> </li>
+                <li><%= form.password_field :password_confirmation%></li>
+                <li><%= form.label :image%></li>
+                <li><%= form.file_field :image%></li>
+                <li><span class="submit"><%= form.submit "Créer mon compte"%></span></li>
+            </ul> 
+            <% end%>
+        </div>
+    </div>
+</div>
+
+<%= render 'footer', user: @user %>

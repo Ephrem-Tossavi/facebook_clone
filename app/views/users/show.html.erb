@@ -6,3 +6,5 @@
 <h1>Page de <%= @user.name %></h1>
 <p>Adresse e-mail: <%= @user.email %></p>
 <p><%= link_to "Blogs_list", blogs_path%></p>
+
+<%= render 'footer', user: @user %>
