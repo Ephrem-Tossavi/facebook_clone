@@ -12,9 +12,10 @@
 
 <p>
   <strong>Image:</strong>
-  <%= image_tag @blog.image.url%>
+  <%= image_tag @blog.image.url, width: 500%>
 </p>
 
-
-<%= link_to 'Edit', edit_blog_path(@blog) %> |
+<%if @blog.user==current_user %>
+<%= link_to 'Edit', edit_blog_path(@blog) %>
+<%end%>
 <%= link_to 'Back', blogs_path %>
